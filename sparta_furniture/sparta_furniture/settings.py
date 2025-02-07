@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # my_app
     'sparta_furniture', # 마켓
-    'product', # 상품
-    'customer', # 고객
+    'customers', # 고객
+    'products', # 상품
 ]
 
 MIDDLEWARE = [
