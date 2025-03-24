@@ -8,4 +8,4 @@ class Product(models.Model):
     product_price = models.IntegerField()                           # 가격
     product_stock = models.IntegerField()                           # 재고
     # 지점 아이디 - 포링키                                     ┌ 삭제시 = 자식 테이블도 삭제  ┌ 역참조 이름
-    sparta_furniture_id = models.ForeignKey(SpartaFurniture, on_delete=models.CASCADE, related_name='product') # 외래키는 변수명이 같아야 함.
+    # sparta_furniture_id = models.ForeignKey(SpartaFurniture, on_delete=models.CASCADE, related_name='product') # 외래키는 변수명이 같아야 함.

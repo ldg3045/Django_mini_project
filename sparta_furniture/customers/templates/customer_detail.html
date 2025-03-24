@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<title>{{ customer.cusromer_id }}고객님, 안녕하세요</title>
+{% csrf_token %}
+{{ customer.as_p }}
+
+
+
+{% endblock content %}

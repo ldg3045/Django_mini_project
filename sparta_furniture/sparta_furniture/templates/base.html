@@ -1,0 +1,27 @@
+<!DOCTYPE html>     <!-- html 문서의 최상위 요소 -->
+<html lang="en">    <!--lang(language): 언어 설정 -->
+    <!-- 헤드 함수 설명
+
+    meta(metadata) : 메타데이터 설정
+    charset(character set) : 문자 인코딩 설정
+    width=device-width : 뷰포트 너비 설정 = 모바일 화면 너비 설정
+    initial-scale=1.0 : 초기 확대/축소 비율 설정
+
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<body>
+
+    <div>  <!-- 상속 페이지 함수 설명
+            block : 공통적으로 적용될 상위 템플릿 시작
+            endblock : 공통적으로 적용될 상위 템플릿 끝
+            -->
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>
+

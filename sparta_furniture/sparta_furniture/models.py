@@ -51,7 +51,7 @@ models.Model : 장고에서 제공하는 모델 클래스
 
 # 스파르타 가구판매점
 class SpartaFurniture(models.Model):
-    sparta_furniture_id = models.CharField(max_length=50, primary_key= True) # 지점 id
+    sparta_furniture_id = models.CharField(max_length=50, primary_key= True) # 지점 id / PK
     sparta_furniture_location = models.CharField(max_length=50)              # 지점 위치
     sparta_furniture_manager = models.CharField(max_length=50)               # 지점장
     sparta_furniture_tel = models.CharField(max_length=50)                   # 지점 전화번호

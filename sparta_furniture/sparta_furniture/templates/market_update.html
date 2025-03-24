@@ -1,1 +1,15 @@
-<h1>수정 페이지</h1>
+{% extends "base.html" %}
+
+{% block content %}
+<title>마켓 수정</title>
+
+<form action="{% url 'market_update' furniture.pk %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">저장</button>
+</form>
+
+<a href="{% url 'market_info' %}"><button type="button">이전으로</button></a>
+{% endblock content %}
+
+

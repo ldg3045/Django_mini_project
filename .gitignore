@@ -141,6 +141,8 @@ env.bak/
 venv.bak/
 # 내가 만든 가상환경
 django_env/ 
+#  hide key
+config.py
 
 # Spyder project settings
 .spyderproject

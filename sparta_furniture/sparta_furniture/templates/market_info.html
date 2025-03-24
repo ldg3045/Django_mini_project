@@ -1,1 +1,43 @@
-<h1>스파르타 가구판매점 정보</h1>
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<title>스파르타 가구판매점 정보</title>
+
+<body>
+    <h1>지점 목록</h1>
+    <a href="{% url 'market_create' %}">새 지점 추가</a>
+
+    {% for furniture in furniture_list %}
+
+    <!-- table(테이블) 태그
+		- tr 태그 : 테이블의 행을 만드는 태그.
+		- th 태그 : 테이블의 열(타이틀-제목)을 만드는 태그.
+		- td 태그 : 테이블의 열을 만드는 태그.
+	 -->
+    <table border="1" cellpadding="0">
+        <tr>
+            <th>상호명</th>
+            <th>지점</th>
+            <th>지점장</th>
+        </tr>
+        <tr>
+            <td>{{furniture.sparta_furniture_id}}</td>
+            <td>{{furniture.sparta_furniture_location}}</td>
+            <td>{{furniture.sparta_furniture_manager}}</td>
+        </tr>
+    </table>
+
+    <a href="{% url 'market_update' furniture.pk %}">
+        <button type="button">수정</button>
+    </a>
+    <form action="{% url 'market_delete' furniture.pk %}" method="POST"> 
+        {% csrf_token %}
+        <input type="submit" value="삭제">
+    </form> 
+
+    {% endfor %}
+
+</body>
+{% endblock content %}

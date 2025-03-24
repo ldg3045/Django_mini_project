@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<title>마켓 생성</title>
+<!-- form(폼) 태그 설명
+
+- form 태그(<form>...</form>)에서 일어난(action) 일을
+=  url 'market_create' 경로에 GET 방식으로 전달하는 것이다.
+
+- action : <button> 또는 <input>이 일어나는 경우
+= 폼 태그 안에 있는 모든 데이터를 전달하는 것이다.
+
+- method : 전달 방식
+= POST 방식으로 전달하는 것이다.
+
+- ★중요★ (form을 쓰면 무조건 쓰자.)
+submit : 데이터를 서버에 전달
+= 이게 없으면 폼을 제출해도 서버엔 전달되지 않는다.
+
+-->
+
+<form action="{% url 'market_create' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+
+
+    <button type="submit">저장</button>
+    
+</form>
+<a href=" {% url 'market_info' %} ">마켓 목록으로</a>
+
+{% endblock content %}
+
+
+<!-- 250211 오타 🎈수정해야 될 내용
+    line 23 fore -> form
+-->
